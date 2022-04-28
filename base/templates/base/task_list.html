@@ -1,5 +1,6 @@
 <h1>to do list</h1>
 
+<a href="{% url 'task_create' %}">add item</a>
 
 <table>
     <tr>
@@ -10,6 +11,7 @@
     <tr>
         <td>{{task.title}}</td>
         <td><a href="{% url 'task' task.id %}">view</a></td>
+
     </tr>
 
     {% empty %}

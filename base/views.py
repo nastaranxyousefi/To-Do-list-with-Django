@@ -13,4 +13,9 @@ class TaskListView(generic.ListView):
 class TaskDetailView(generic.DetailView):
     model = Task
     template_name = 'base/task_detail.html'
-    
+
+
+class TaskCreateView(generic.CreateView):
+    model = Task
+    template_name = 'base/task_create_form.html'
+    fields = '__all__'
