@@ -8,3 +8,9 @@ class TaskListView(generic.ListView):
     model = Task
     template_name = 'base/task_list.html'
     context_object_name = 'tasks'
+
+
+class TaskDetailView(generic.DetailView):
+    model = Task
+    template_name = 'base/task_detail.html'
+    
