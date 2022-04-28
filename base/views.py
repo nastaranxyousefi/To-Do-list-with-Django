@@ -19,3 +19,9 @@ class TaskCreateView(generic.CreateView):
     model = Task
     template_name = 'base/task_create_form.html'
     fields = '__all__'
+
+
+class TaskUpdateView(generic.UpdateView):
+    model = Task
+    template_name = 'base/task_update_form.html'
+    fields = '__all__'
