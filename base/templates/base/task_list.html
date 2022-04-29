@@ -16,7 +16,14 @@
 <p> hooray! You have completed all of your tasks.</p>
 {% endif %}
 
-<a href="{% url 'task_create' %}">add item</a>
+<a href="{% url 'task_create' %}">add task</a>
+
+<form method="GET">
+    <input type="text" name="search-area" value="{{search_input}}">
+    <input type="submit" value="search">
+
+</form>
+
 
 <table>
     <tr>
