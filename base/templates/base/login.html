@@ -1,10 +1,30 @@
-<h1>login form</h1>
+{% extends 'main.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="header-bar" >
+
+
+    <h1>Login</h1>
+   
+
+</div>
+
+<div class="card-body">
+
+
 
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Login">
+    <input class="button" type="submit" value="Login">
 </form>
 
 
-<p>Don't have an account? <a href="{% url 'signup' %}">signup</a></p>
+<p style="color: #cf4949;">Don't have an account? <a style="color: #3294f0;text-decoration: none;" href="{% url 'signup' %}">signup</a></p>
+
+</div>
+
+{% endblock %}
