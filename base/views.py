@@ -60,10 +60,6 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
         return context
 
 
-class TaskDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Task
-    template_name = 'base/task_detail.html'
-
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):
     model = Task
