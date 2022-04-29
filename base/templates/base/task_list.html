@@ -10,6 +10,11 @@
 <br>
 
 <h1>to do list</h1>
+{% if count is not 0 %}
+<p> you have {{count}} Uncompleted task{{count|pluralize:"s"}}</p>
+{% else %}
+<p> hooray! You have completed all of your tasks.</p>
+{% endif %}
 
 <a href="{% url 'task_create' %}">add item</a>
 
