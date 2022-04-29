@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from django.views import generic
 from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
 
 from .models import Task
+
+
+class CustomLoginView(LoginView):
+    template_name = 'base/Login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self):
+        return reverse_lazy('tasks')
 
 
 class TaskListView(generic.ListView):
