@@ -6,7 +6,7 @@
         <h1>Hello {{request.user|title}}</h1> 
 
         {% if count is not 0 %}
-            <h3 style="margin: 0;"> you have {{count}} Uncompleted task{{count|pluralize:"s"}}</h3>
+            <h3 style="margin: 0;"> you have {{count}} incompleted task{{count|pluralize:"s"}}</h3>
         {% else %}
             <h3 style="margin: 0;"> hooray! You have completed all of your tasks.</h3>
         {% endif %}
