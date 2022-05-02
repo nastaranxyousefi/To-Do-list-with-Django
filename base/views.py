@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
